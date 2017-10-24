@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scroll Template</title>
+        <script src="../JS/jquery.js"></script>
+        <script src="../JS/jquery-ui.min.js"></script>  
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("div").scroll(function () {
+                    var $this = $(this);
+                    var height = this.scrollHeight - $this.height(); // Get the height of the div
+                    var scroll = $this.scrollTop(); // Get the vertical scroll position
+
+                    var isScrolledToEnd = (scroll >= height);
+
+                    $(".scroll-pos").text(scroll);
+                    $(".scroll-height").text(height);
+
+                    if (isScrolledToEnd) {
+                        var additionalContent = GetMoreContent(); // Get the additional content
+
+                        $this.append(additionalContent); // Append the additional content
+
+                    }
+                });
+            });
+
+
+            function GetMoreContent() {
+                return "<p>This is the div content</p><p>This is the div content</p><p>This is the div content</p><p>This is the div content</p><p>This is the div content</p>";
+            }
+        </script>
+    </head>
+        <body>
+            <div style="overflow: scroll;height: 150px; border: 1px solid red;">
+                <p>This is the div content</p>
+                <p>This is the div content</p>
+                <p>This is the div content</p>
+                <p>This is the div content</p>
+                <p>This is the div content</p>
+                <p>This is the div content</p>
+            </div> 
+
+            Scroll Height: <span class="scroll-height"></span>   <br/>
+            Scroll position: <span class="scroll-pos"></span>   
+        </body>
+    </html>
