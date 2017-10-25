@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #173152;
+}
+
+.grid {
+    background-color: #173152;
+}
+
+h1 {
+    width: 60%;
+    text-align: center;
+    font-size: 42px;
+    margin: 30px auto;
+    border-radius: 15px;
+    background-color: #dfe5ed;
+}
+
+#container {
+    width: 80%;
+    max-width: 1200px;
+    height: 80px;
+    height: 160px;
+    text-align: center;
+    font-size: 56px;
+    overflow: scroll;
+    margin: 50px auto;
+    border: 5px ridge #f4eaf2;
+    background-color: #aab6c4;
+}
