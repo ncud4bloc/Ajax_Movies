@@ -10,7 +10,7 @@ var newAddition;
 function getMovies(){
     for (var i = count; i < count + 3; i++){
         newAddition = myMovieList[i];
-        var myURL = 'http://www.omdbapi.com/?i=' + newAddition;
+        var myURL = 'https://www.omdbapi.com/?i=' + newAddition;
         console.log('URL: ' + myURL);
         
         $.ajax({
